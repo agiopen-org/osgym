@@ -88,14 +88,14 @@ python test_osgym.py
 #### `POST /reset`
 - **Description:** Initializes a new environment with a given task configuration.
 - **Request Body:**
-  ```json
+  ```jsonl
   {
     "task_config": { ... },  // Task configuration JSON
     "timeout": 1000          // Timeout in seconds
   }
   ```
 - **Response:**
-  ```json
+  ```jsonl
   {
     "screenshot": "<base64-encoded image>",
     "problem": "<task instruction>",
@@ -106,14 +106,14 @@ python test_osgym.py
 #### `POST /step`
 - **Description:** Executes an action in the environment.
 - **Request Body:**
-  ```json
+  ```jsonl
   {
     "action": "<action string>",
     "vm_id": <int>
   }
   ```
 - **Response:**
-  ```json
+  ```jsonl
   {
     "screenshot": "<base64-encoded image>",
     "is_finish": <bool>,
@@ -124,13 +124,13 @@ python test_osgym.py
 #### `POST /shutdown`
 - **Description:** Shuts down and releases a VM.
 - **Request Body:**
-  ```json
+  ```jsonl
   {
     "vm_id": <int or 'all'>
   }
   ```
 - **Response:**
-  ```json
+  ```jsonl
   {
     "vm_id": <int or 'all'>
   }
@@ -141,7 +141,7 @@ python test_osgym.py
 - **Query Parameters:**
   - `vmId`: VM ID (integer)
 - **Response:**
-  ```json
+  ```jsonl
   {
     "screenshot": "<base64-encoded image>",
     "vm_id": <int>
