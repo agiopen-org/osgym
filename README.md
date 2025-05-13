@@ -95,7 +95,7 @@ python test_osgym.py
   }
   ```
 - **Response:**
-  ```jsonl
+  ```
   {
     "screenshot": "<base64-encoded image>",
     "problem": "<task instruction>",
@@ -106,14 +106,14 @@ python test_osgym.py
 #### `POST /step`
 - **Description:** Executes an action in the environment.
 - **Request Body:**
-  ```jsonl
+  ```
   {
     "action": "<action string>",
     "vm_id": <int>
   }
   ```
 - **Response:**
-  ```jsonl
+  ```
   {
     "screenshot": "<base64-encoded image>",
     "is_finish": <bool>,
@@ -124,13 +124,13 @@ python test_osgym.py
 #### `POST /shutdown`
 - **Description:** Shuts down and releases a VM.
 - **Request Body:**
-  ```jsonl
+  ```
   {
     "vm_id": <int or 'all'>
   }
   ```
 - **Response:**
-  ```jsonl
+  ```
   {
     "vm_id": <int or 'all'>
   }
@@ -141,7 +141,7 @@ python test_osgym.py
 - **Query Parameters:**
   - `vmId`: VM ID (integer)
 - **Response:**
-  ```jsonl
+  ```
   {
     "screenshot": "<base64-encoded image>",
     "vm_id": <int>
