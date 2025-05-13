@@ -88,7 +88,7 @@ python test_osgym.py
 #### `POST /reset`
 - **Description:** Initializes a new environment with a given task configuration.
 - **Request Body:**
-  ```jsonl
+  ```
   {
     "task_config": { ... },  // Task configuration JSON
     "timeout": 1000          // Timeout in seconds
