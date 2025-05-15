@@ -504,7 +504,7 @@ class MultiTurnDataloader:
             except:
                 break
 
-    def step(self, batch_return):
+    def async_step(self, batch_return):
         actions, meta_infos = self._process_batch_return(batch_return)
         for i in range(len(actions)):
             wid, action = actions[i]
